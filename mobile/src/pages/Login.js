@@ -11,7 +11,6 @@ function Login({ navigation }) {
   useEffect(() => {
     AsyncStorage.getItem('user').then(userItem => {
       if(userItem){
-        console.log('useritem - ', userItem)
         navigation.navigate('Main', { user: userItem })
       }
     })
